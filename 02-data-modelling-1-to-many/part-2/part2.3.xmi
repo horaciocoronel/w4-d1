@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.genmymodel.rds.core:Database xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.genmymodel.rds.core="http://com.genmymodel.rds.core/1.0" xmi:id="_lMItIKenEeeEQN1ZyOr-_g" name="model">
+  <eAnnotations xmi:id="_lMItIaenEeeEQN1ZyOr-_g" source="genmymodel">
+    <details xmi:id="_lMItIqenEeeEQN1ZyOr-_g" key="uuid" value="_Kw9hwKeaEeeEQN1ZyOr-_g"/>
+  </eAnnotations>
+  <elements xsi:type="com.genmymodel.rds.core:Table" xmi:id="_lMItI6enEeeEQN1ZyOr-_g" name="REVIEW">
+    <eAnnotations xmi:id="_lMItJKenEeeEQN1ZyOr-_g" source="genmymodel">
+      <details xmi:id="_lMItJaenEeeEQN1ZyOr-_g" key="uuid" value="_7-T4kInTEDWaqJKG3wxUNg"/>
+    </eAnnotations>
+    <columns xmi:id="_lMItJqenEeeEQN1ZyOr-_g" name="id" nullable="false" PK="true">
+      <eAnnotations xmi:id="_lMItJ6enEeeEQN1ZyOr-_g" source="genmymodel">
+        <details xmi:id="_lMItKKenEeeEQN1ZyOr-_g" key="uuid" value="_DUv6oInUEDWaqJKG3wxUNg"/>
+      </eAnnotations>
+      <type href="pathmap://RDS_LIBRARIES/RdsPrimitiveTypes.library.rds#//@elements.5"/>
+    </columns>
+    <columns xmi:id="_lMItKaenEeeEQN1ZyOr-_g" name="restaurant_id" primaryReferences="_lMItYqenEeeEQN1ZyOr-_g">
+      <eAnnotations xmi:id="_lMItKqenEeeEQN1ZyOr-_g" source="genmymodel">
+        <details xmi:id="_lMItK6enEeeEQN1ZyOr-_g" key="uuid" value="_RashoInUEDWaqJKG3wxUNg"/>
+      </eAnnotations>
+      <type href="pathmap://RDS_LIBRARIES/RdsPrimitiveTypes.library.rds#//@elements.5"/>
+    </columns>
+    <columns xmi:id="_lMItLKenEeeEQN1ZyOr-_g" name="food_critic_id" primaryReferences="_lMItVqenEeeEQN1ZyOr-_g">
+      <eAnnotations xmi:id="_lMItLaenEeeEQN1ZyOr-_g" source="genmymodel">
+        <details xmi:id="_lMItLqenEeeEQN1ZyOr-_g" key="uuid" value="_TCj3UInUEDWaqJKG3wxUNg"/>
+      </eAnnotations>
+      <type href="pathmap://RDS_LIBRARIES/RdsPrimitiveTypes.library.rds#//@elements.5"/>
+    </columns>
+    <columns xmi:id="_lMItL6enEeeEQN1ZyOr-_g" name="text" size="1000">
+      <eAnnotations xmi:id="_lMItMKenEeeEQN1ZyOr-_g" source="genmymodel">
+        <details xmi:id="_lMItMaenEeeEQN1ZyOr-_g" key="uuid" value="_1qi_AInUEDWaqJKG3wxUNg"/>
+      </eAnnotations>
+      <type href="pathmap://RDS_LIBRARIES/RdsPrimitiveTypes.library.rds#//@elements.1"/>
+    </columns>
+  </elements>
+  <elements xsi:type="com.genmymodel.rds.core:Table" xmi:id="_lMItMqenEeeEQN1ZyOr-_g" name="FOOD_CRITIC">
+    <eAnnotations xmi:id="_lMItM6enEeeEQN1ZyOr-_g" source="genmymodel">
+      <details xmi:id="_lMItNKenEeeEQN1ZyOr-_g" key="uuid" value="_9aSHUInTEDWaqJKG3wxUNg"/>
+    </eAnnotations>
+    <columns xmi:id="_lMItNaenEeeEQN1ZyOr-_g" name="id" nullable="false" PK="true" foreignReferences="_lMItVqenEeeEQN1ZyOr-_g">
+      <eAnnotations xmi:id="_lMItNqenEeeEQN1ZyOr-_g" source="genmymodel">
+        <details xmi:id="_lMItN6enEeeEQN1ZyOr-_g" key="uuid" value="_CwW0IInUEDWaqJKG3wxUNg"/>
+      </eAnnotations>
+      <type href="pathmap://RDS_LIBRARIES/RdsPrimitiveTypes.library.rds#//@elements.5"/>
+    </columns>
+    <columns xmi:id="_lMItOKenEeeEQN1ZyOr-_g" name="publication_id" foreignReferences="_lMItU6enEeeEQN1ZyOr-_g">
+      <eAnnotations xmi:id="_lMItOaenEeeEQN1ZyOr-_g" source="genmymodel">
+        <details xmi:id="_lMItOqenEeeEQN1ZyOr-_g" key="uuid" value="_Ove4kInUEDWaqJKG3wxUNg"/>
+      </eAnnotations>
+      <type href="pathmap://RDS_LIBRARIES/RdsPrimitiveTypes.library.rds#//@elements.5"/>
+    </columns>
+    <columns xmi:id="_lMItO6enEeeEQN1ZyOr-_g" name="name" size="255">
+      <eAnnotations xmi:id="_lMItPKenEeeEQN1ZyOr-_g" source="genmymodel">
+        <details xmi:id="_lMItPaenEeeEQN1ZyOr-_g" key="uuid" value="_QEAbgInUEDWaqJKG3wxUNg"/>
+      </eAnnotations>
+      <type href="pathmap://RDS_LIBRARIES/RdsPrimitiveTypes.library.rds#//@elements.1"/>
+    </columns>
+  </elements>
+  <elements xsi:type="com.genmymodel.rds.core:Table" xmi:id="_lMItPqenEeeEQN1ZyOr-_g" name="PUBLICATION">
+    <eAnnotations xmi:id="_lMItP6enEeeEQN1ZyOr-_g" source="genmymodel">
+      <details xmi:id="_lMItQKenEeeEQN1ZyOr-_g" key="uuid" value="_-6tYQInTEDWaqJKG3wxUNg"/>
+    </eAnnotations>
+    <columns xmi:id="_lMItQaenEeeEQN1ZyOr-_g" name="id" nullable="false" PK="true" primaryReferences="_lMItU6enEeeEQN1ZyOr-_g">
+      <eAnnotations xmi:id="_lMItQqenEeeEQN1ZyOr-_g" source="genmymodel">
+        <details xmi:id="_lMItQ6enEeeEQN1ZyOr-_g" key="uuid" value="_D0RIMInUEDWaqJKG3wxUNg"/>
+      </eAnnotations>
+      <type href="pathmap://RDS_LIBRARIES/RdsPrimitiveTypes.library.rds#//@elements.5"/>
+    </columns>
+    <columns xmi:id="_lMItRKenEeeEQN1ZyOr-_g" name="name" size="255">
+      <eAnnotations xmi:id="_lMItRaenEeeEQN1ZyOr-_g" source="genmymodel">
+        <details xmi:id="_lMItRqenEeeEQN1ZyOr-_g" key="uuid" value="_Nl3lIInUEDWaqJKG3wxUNg"/>
+      </eAnnotations>
+      <type href="pathmap://RDS_LIBRARIES/RdsPrimitiveTypes.library.rds#//@elements.1"/>
+    </columns>
+  </elements>
+  <elements xsi:type="com.genmymodel.rds.core:Table" xmi:id="_lMItR6enEeeEQN1ZyOr-_g" name="CHEF">
+    <eAnnotations xmi:id="_lMItSKenEeeEQN1ZyOr-_g" source="genmymodel">
+      <details xmi:id="_lMItSaenEeeEQN1ZyOr-_g" key="uuid" value="_AbZH4InUEDWaqJKG3wxUNg"/>
+    </eAnnotations>
+    <columns xmi:id="_lMItSqenEeeEQN1ZyOr-_g" name="id" nullable="false" PK="true">
+      <eAnnotations xmi:id="_lMItS6enEeeEQN1ZyOr-_g" source="genmymodel">
+        <details xmi:id="_lMItTKenEeeEQN1ZyOr-_g" key="uuid" value="_Ea2nEInUEDWaqJKG3wxUNg"/>
+      </eAnnotations>
+      <type href="pathmap://RDS_LIBRARIES/RdsPrimitiveTypes.library.rds#//@elements.5"/>
+    </columns>
+    <columns xmi:id="_lMItTaenEeeEQN1ZyOr-_g" name="name" size="255">
+      <eAnnotations xmi:id="_lMItTqenEeeEQN1ZyOr-_g" source="genmymodel">
+        <details xmi:id="_lMItT6enEeeEQN1ZyOr-_g" key="uuid" value="_Jr_wkInUEDWaqJKG3wxUNg"/>
+      </eAnnotations>
+      <type href="pathmap://RDS_LIBRARIES/RdsPrimitiveTypes.library.rds#//@elements.1"/>
+    </columns>
+    <columns xmi:id="_lMItUKenEeeEQN1ZyOr-_g" name="restaurant_id" primaryReferences="_lMItZaenEeeEQN1ZyOr-_g">
+      <eAnnotations xmi:id="_lMItUaenEeeEQN1ZyOr-_g" source="genmymodel">
+        <details xmi:id="_lMItUqenEeeEQN1ZyOr-_g" key="uuid" value="_BgFpoInVEDWaqJKG3wxUNg"/>
+      </eAnnotations>
+      <type href="pathmap://RDS_LIBRARIES/RdsPrimitiveTypes.library.rds#//@elements.5"/>
+    </columns>
+  </elements>
+  <elements xsi:type="com.genmymodel.rds.core:Reference" xmi:id="_lMItU6enEeeEQN1ZyOr-_g" primaryKeyColumns="_lMItQaenEeeEQN1ZyOr-_g" foreignKeyColumns="_lMItOKenEeeEQN1ZyOr-_g">
+    <eAnnotations xmi:id="_lMItVKenEeeEQN1ZyOr-_g" source="genmymodel">
+      <details xmi:id="_lMItVaenEeeEQN1ZyOr-_g" key="uuid" value="_XrntIInUEDWaqJKG3wxUNg"/>
+    </eAnnotations>
+  </elements>
+  <elements xsi:type="com.genmymodel.rds.core:Reference" xmi:id="_lMItVqenEeeEQN1ZyOr-_g" primaryKeyColumns="_lMItLKenEeeEQN1ZyOr-_g" foreignKeyColumns="_lMItNaenEeeEQN1ZyOr-_g">
+    <eAnnotations xmi:id="_lMItV6enEeeEQN1ZyOr-_g" source="genmymodel">
+      <details xmi:id="_lMItWKenEeeEQN1ZyOr-_g" key="uuid" value="_YjP4sInUEDWaqJKG3wxUNg"/>
+    </eAnnotations>
+  </elements>
+  <elements xsi:type="com.genmymodel.rds.core:Table" xmi:id="_lMItWaenEeeEQN1ZyOr-_g" name="RESTAURANT">
+    <eAnnotations xmi:id="_lMItWqenEeeEQN1ZyOr-_g" source="genmymodel">
+      <details xmi:id="_lMItW6enEeeEQN1ZyOr-_g" key="uuid" value="_pCXWgInUEDWaqJKG3wxUNg"/>
+    </eAnnotations>
+    <columns xmi:id="_lMItXKenEeeEQN1ZyOr-_g" name="id" nullable="false" PK="true" foreignReferences="_lMItYqenEeeEQN1ZyOr-_g _lMItZaenEeeEQN1ZyOr-_g">
+      <eAnnotations xmi:id="_lMItXaenEeeEQN1ZyOr-_g" source="genmymodel">
+        <details xmi:id="_lMItXqenEeeEQN1ZyOr-_g" key="uuid" value="_qWkJUInUEDWaqJKG3wxUNg"/>
+      </eAnnotations>
+      <type href="pathmap://RDS_LIBRARIES/RdsPrimitiveTypes.library.rds#//@elements.5"/>
+    </columns>
+    <columns xmi:id="_lMItX6enEeeEQN1ZyOr-_g" name="name" size="255">
+      <eAnnotations xmi:id="_lMItYKenEeeEQN1ZyOr-_g" source="genmymodel">
+        <details xmi:id="_lMItYaenEeeEQN1ZyOr-_g" key="uuid" value="_sKtngInUEDWaqJKG3wxUNg"/>
+      </eAnnotations>
+      <type href="pathmap://RDS_LIBRARIES/RdsPrimitiveTypes.library.rds#//@elements.1"/>
+    </columns>
+  </elements>
+  <elements xsi:type="com.genmymodel.rds.core:Reference" xmi:id="_lMItYqenEeeEQN1ZyOr-_g" primaryKeyColumns="_lMItKaenEeeEQN1ZyOr-_g" foreignKeyColumns="_lMItXKenEeeEQN1ZyOr-_g">
+    <eAnnotations xmi:id="_lMItY6enEeeEQN1ZyOr-_g" source="genmymodel">
+      <details xmi:id="_lMItZKenEeeEQN1ZyOr-_g" key="uuid" value="_wjPG8InUEDWaqJKG3wxUNg"/>
+    </eAnnotations>
+  </elements>
+  <elements xsi:type="com.genmymodel.rds.core:Reference" xmi:id="_lMItZaenEeeEQN1ZyOr-_g" primaryKeyColumns="_lMItUKenEeeEQN1ZyOr-_g" foreignKeyColumns="_lMItXKenEeeEQN1ZyOr-_g">
+    <eAnnotations xmi:id="_lMItZqenEeeEQN1ZyOr-_g" source="genmymodel">
+      <details xmi:id="_lMItZ6enEeeEQN1ZyOr-_g" key="uuid" value="_DhAYgInVEDWaqJKG3wxUNg"/>
+    </eAnnotations>
+  </elements>
+</com.genmymodel.rds.core:Database>

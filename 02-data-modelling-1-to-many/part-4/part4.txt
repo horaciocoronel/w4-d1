@@ -1,0 +1,136 @@
+1) Find the author with the name 'Kara Melton' and then select all the articles she has written.
+
+SELECT id, name FROM authors WHERE name = 'Kara Melton';
+
+id |    name
+----+-------------
+ 8 | Kara Melton
+(1 row)
+
+SELECT title FROM articles WHERE author_id = 8;
+
+--------------------------------------------------------------------------------------------------
+ How Tech Business Models Come From Marginalized Communities, But Startups Are Still Mostly White
+ Confronting the Assumption of Whiteness in Virtual Spaces
+(2 rows)
+
+2) Find Ontario in the provinces table and then find all the cities in that province.
+
+SELECT id, name FROM provinces WHERE name = 'Ontario';
+id |  name
+----+---------
+14 | Ontario
+(1 row)
+
+SELECT name FROM cities WHERE province_id = 14;
+
+---------
+ Toronto
+ Ottawa
+(2 rows)
+
+3) Who wrote the article called 'Coding Bootcamps and Emotional Labor'?
+SELECT title, author_id FROM articles WHERE title = 'Coding Bootcamps and Emotional Labor';
+
+title                 | author_id
+--------------------------------------+-----------
+Coding Bootcamps and Emotional Labor |         4
+(1 row)
+
+SELECT id, name FROM authors WHERE id = 4;
+
+id |       name
+----+-------------------
+ 4 | Tilde Ann Thurium
+(1 row)
+
+4) Write a series of SQL queries to find out how many provinces are in Canada.
+
+SELECT name, COUNT(name) FROM provinces;
+count
+-------
+   14
+(1 row)
+
+5) How many people live at 4740 McDermott Street?
+SELECT id, address FROM residences WHERE address = '4740 McDermott Street';
+id |        address
+----+-----------------------
+ 9 | 4740 McDermott Street
+(1 row)
+
+SELECT id, name, residence_id FROM persons WHERE residence_id = 9;
+
+id |     name     | residence_id
+----+--------------+--------------
+16 | Malvina King |            9
+17 | Theo Wolff   |            9
+(2 rows)
+
+6) What city is 4740 McDermott Street in?
+
+SELECT city_id FROM residences WHERE address = '4740 McDermott Street';
+
+city_id
+---------
+     11
+(1 row)
+
+SELECT id, name, province_id FROM cities WHERE id = 11;
+
+id |  name  | province_id
+----+--------+-------------
+11 | Ottawa |          14
+(1 row)
+
+7) What province is 4740 McDermott Street in?
+
+SELECT id, name FROM provinces WHERE id = 14;
+
+id |  name
+----+---------
+14 | Ontario
+(1 row)
+
+8) What country is 4740 McDermott Street in?
+SELECT country_id FROM provinces WHERE id = 14;
+
+country_id
+------------
+         1
+(1 row)
+
+SELECT name FROM countries WHERE id = 1;
+
+name
+--------
+Canada
+(1 row)
+
+9) Find the person named 'Destini Davis' and then use a series of SQL queries to find what country they live in.
+
+SELECT name, residence_id FROM persons WHERE name = 'Destini Davis';
+
+name      | residence_id
+---------------+--------------
+Destini Davis |            2
+(1 row)
+
+SELECT id, city_id FROM residences WHERE id = 2;
+SELECT id, province_id FROM cities WHERE id = 8;
+SELECT id, country_id FROM provinces WHERE id = 14;
+SELECT name FROM countries WHERE id = 1;
+
+--------
+ Canada
+(1 row)
+
+10) How many articles has Aditya Mukerjee written?
+SELECT id, name FROM authors WHERE name = 'Aditya Mukerjee';
+
+SELECT count(title) FROM articles where id = 2;
+
+count
+-------
+    1
+(1 row)
